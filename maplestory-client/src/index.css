@@ -1,0 +1,151 @@
+/* .rimams-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px !important;
+  /* max-width: 100%; */
+/* height: auto; */
+/* height: 200px; */
+/* -webkit-animation: rimams-logo 3s ease-in-out infinite;
+  animation: rimams-logo 3s ease-in-out infinite;
+  margin-bottom: 25px;
+} 
+*/
+
+.login-input {
+  font-weight: bold;
+}
+
+#top-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* #basic-navbar-nav {
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+.home-nav-btn {
+  text-decoration: none;
+}
+
+.login-input {
+  width: 50%;
+  margin: auto;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.welcome {
+  font-weight: bold;
+}
+
+body {
+  height: 100%;
+  background: url(./images/MapleStory-Arcana-wallpaper-engine-.jpg) no-repeat
+    center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-badge {
+  font-size: 25px;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+
+#rimams-logo {
+  animation: MoveUpDown 3s linear infinite;
+}
+
+.fade-in-logo {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin: 15px;
+  font-weight: bold;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
+  border: 3px solid rgba(0, 0, 0, 0.6);
+}
