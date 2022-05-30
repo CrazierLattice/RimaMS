@@ -1,45 +1,53 @@
-/* .rimams-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 450px !important;
-  /* max-width: 100%; */
-/* height: auto; */
-/* height: 200px; */
-/* -webkit-animation: rimams-logo 3s ease-in-out infinite;
-  animation: rimams-logo 3s ease-in-out infinite;
-  margin-bottom: 25px;
-} 
-*/
-
 .login-input {
   font-weight: bold;
 }
 
 #top-nav {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  width: 75%;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
 .nav-link {
   text-decoration: none;
-  font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Quicksand', sans-serif;
   font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  z-index: 1;
+  color: whitesmoke !important;
+}
+.nav-link:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: rgba(8, 14, 55, 0.7);
+
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+.nav-link:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
 }
 
-/* #basic-navbar-nav {
-  border: 2px solid black;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-} */
-
-.home-nav-btn {
+.home-link {
   text-decoration: none;
 }
+/* .home-link:hover {
+  color: #f1c40f;
+} */
 
 .login-input {
   width: 50%;
@@ -56,8 +64,7 @@
 
 body {
   height: 100%;
-  background: url(./images/MapleStory-Arcana-wallpaper-engine-.jpg) no-repeat
-    center center fixed;
+  background: url(./images/maxresdefault.jpg) no-repeat center center fixed;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -81,6 +88,8 @@ body {
 
 #rimams-logo {
   animation: MoveUpDown 3s linear infinite;
+  height: 60%;
+  width: 60%;
 }
 
 .fade-in-logo {
@@ -140,12 +149,13 @@ body {
   }
 }
 
-main {
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
+.login-container,
+.register-container,
+.forum-container {
+  background-color: rgba(3, 3, 3, 0.5);
+  color: rgb(223, 157, 35);
   margin: 15px;
   font-weight: bold;
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Ubuntu', sans-serif;
-  border: 3px solid rgba(0, 0, 0, 0.6);
+  border: 10px solid rgba(0, 0, 0, 0.3);
 }

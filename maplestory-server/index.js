@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connection, { sqlQuery } from './dbconfig.js';
 import loginRoute from './routes/loginRoute.js';
 import registerRoute from './routes/registerRoute.js';
+import forumRoute from './routes/forumRoute.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/login-route', loginRoute);
 app.use('/api/register-route', registerRoute);
+app.use('/api/forum-route', forumRoute);
 
 app.listen(PORT, console.log(`Running on port ${PORT}`));
 // app.get('/', async (req, res) => {

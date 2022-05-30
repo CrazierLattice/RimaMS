@@ -1,19 +1,19 @@
 import './App.css';
-import logo from './images/rimams.jpg';
+import logo from './images/MapleStory1.png';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Badge from 'react-bootstrap/Badge';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import HomeComponent from './components/HomeComponent';
 import LoginComponent from './components/LoginComponent';
 import RegisterComponent from './components/RegisterComponent';
+import ForumComponent from './components/ForumComponent';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const isLoggedIn = false;
+  const user = useSelector((state) => state.user.value);
+
   return (
     <BrowserRouter>
       <Container>
@@ -22,22 +22,12 @@ function App() {
             <header>
               <Row>
                 <Navbar className="top-nav" expand="lg">
-                  <h2>
-                    <Link className="nav-link" to="/">
-                      Home
-                    </Link>
-                  </h2>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav id="top-nav" className="me-auto ">
                       <h5>
-                        <Link className="nav-link" to="/register">
-                          Register
-                        </Link>
-                      </h5>
-                      <h5>
-                        <Link className="nav-link" to="/login">
-                          Log In
+                        <Link className="nav-link" to="/">
+                          Home
                         </Link>
                       </h5>
                       <h5>
@@ -50,6 +40,26 @@ function App() {
                           Download
                         </Link>
                       </h5>
+                      {!user ? (
+                        <>
+                          <h5>
+                            <Link className="nav-link" to="/register">
+                              Register
+                            </Link>
+                          </h5>
+                          <h5>
+                            <Link className="nav-link" to="/login">
+                              Log In
+                            </Link>
+                          </h5>
+                        </>
+                      ) : (
+                        <h5>
+                          <Link className="nav-link" to="/user-panel">
+                            User Panel
+                          </Link>
+                        </h5>
+                      )}
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
@@ -70,6 +80,7 @@ function App() {
                 <Route path="/" element={<HomeComponent />} />
                 <Route path="/login" element={<LoginComponent />} />
                 <Route path="/register" element={<RegisterComponent />} />
+                <Route path="/forum" element={<ForumComponent />} />
               </Routes>
             </Container>
           </main>
