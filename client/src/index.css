@@ -9,6 +9,10 @@
   margin: auto;
 }
 
+.pagination {
+  justify-content: center;
+}
+
 .nav-link {
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
